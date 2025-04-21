@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            WebView()
+            WebView(url: URL(string: "https://youtu.be/hUBhYBaV22k")!)
                 .tabItem {
                     Image(systemName: "safari")
                     Text("Safari")

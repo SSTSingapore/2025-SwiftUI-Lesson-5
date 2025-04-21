@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import WebKit
 
-struct WebView: View {
-    var body: some View {
-        Text("WebView")
+struct WebView: UIViewRepresentable {
+    let url: URL
+    
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        webView.load(URLRequest(url: url))
+        return webView
     }
-}
-
-#Preview {
-    WebView()
+    
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        
+    }
 }
