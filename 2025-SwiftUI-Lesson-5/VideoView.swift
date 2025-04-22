@@ -10,13 +10,10 @@ import AVKit
 
 struct VideoView: View {
     @State var player = AVPlayer(url: Bundle.main.url(forResource: "video", withExtension: "mov")!)
-    @State var isPlaying: Bool = false
-    @State var toShow = true
     
     var body: some View {
         VStack {
             VideoPlayer(player: player)
-                .frame(width: .infinity, height: .infinity, alignment: .center)
                 .ignoresSafeArea()
         }
     }
