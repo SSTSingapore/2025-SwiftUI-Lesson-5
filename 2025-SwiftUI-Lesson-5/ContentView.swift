@@ -8,21 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var coice: Int = 0
+    
     var body: some View {
-        TabView {
-            WebView(url: URL(string: "https://youtu.be/hUBhYBaV22k")!)
-                .tabItem {
-                    Image(systemName: "safari")
-                    Text("Safari")
-                }
-            VideoView()
-                .tabItem {
-                    Image(systemName: "video")
-                    Text("Video")
-                }
-            
+        TabView(selection: $coice) {
+            Tab("WebView", systemImage: "safari", value: 0) {
+                WebView(url: URL(string: "https://youtu.be/hUBhYBaV22k")!)
+            }
+            Tab("VideoView", systemImage: "video", value: 1) {
+                VideoView()
+            }
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
