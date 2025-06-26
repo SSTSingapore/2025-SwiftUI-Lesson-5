@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 struct VideoView: View {
-    @State var player = AVPlayer(url: Bundle.main.url(forResource: "video", withExtension: "mov")!)
+    @State var player = AVPlayer(url: Bundle.main.url(forResource: "video", withExtension: "mp4")!)
     
     var body: some View {
         VStack {
