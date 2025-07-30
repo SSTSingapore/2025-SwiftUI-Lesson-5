@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var coice: Int = 0
+    @State private var choice: Int = 0
     
     var body: some View {
-        TabView(selection: $coice) {
+        TabView(selection: $choice) {
             Tab("WebView", systemImage: "safari", value: 0) {
                 WebView(url: URL(string: "https://youtu.be/hUBhYBaV22k")!)
             }
